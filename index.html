@@ -4,6 +4,7 @@
     <title>Test Horizontal Animation</title>
     <style>
         .conteiner {
+            height: 100%;
             background: #cccccc;
             padding: 20px;
         }
@@ -12,14 +13,46 @@
             background: #3b77e7;
             height: 100px;
             width: 100px;
+            animation: move 5s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0)
+            }
+
+            25% {
+                transform: translate(500PX, 100px)
+            }
+
+            50% {
+                transform: translate(100PX, 500px)
+            }
+
+            100% {
+                transform: translate(0)
+            }
         }
     </style>
 </head>
+
 <body>
-    <p>
-        Source: https://www.youtube.com/watch?v=WRLY66aRXxI
-    </p>
     <div class="conteiner">
+        <p>
+            <a href="https://www.youtube.com/watch?v=WRLY66aRXxI">
+                https://www.youtube.com/watch?v=WRLY66aRXxI
+            </a>
+        </p>
+        <p>
+            <a href="https://www.w3schools.com/css/css3_2dtransforms.asp">
+                https://www.w3schools.com/css/css3_2dtransforms.asp
+            </a>
+        </p>
+        <p>
+            <a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">
+                https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp
+            </a>
+        </p>
         <div class="content">
 
         </div>
