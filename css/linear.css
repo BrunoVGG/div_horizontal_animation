@@ -1,0 +1,39 @@
+.add_move {
+    /* Could add 'infinite' */
+    /* Could add 'linear or forwards' */
+    -ms-transform: move 1s forwards;
+    /* IE 9 */
+    -webkit-transform: move 1s forwards;
+    /* Safari */
+    animation: move 1s forwards;
+}
+
+.back_move {
+    -ms-transform: move_back 1s forwards;
+    /* IE 9 */
+    -webkit-transform: move_back 1s forwards;
+    /* Safari */
+    animation: move_back 1s forwards;
+}
+
+@keyframes move_back {
+    0% {
+        transform: translate(300px);
+    }
+
+    100% {
+        transform: translate(0px);
+        background: green;
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(300px);
+        background: #831212;
+    }
+}

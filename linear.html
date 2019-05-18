@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Test Horizontal Animation</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/linear.css">
+    <script>
+
+        var animate = false;
+
+        function toggleMovement() {
+            debugger;
+            if (animate) {
+                removeMovement();
+            } else {
+                addMovement();
+            }
+            animate = !animate;
+        }
+
+        function addMovement() {
+            var box = document.getElementById('box');
+            box.classList.add('add_move');
+            box.classList.remove('back_move');
+        }
+
+        function removeMovement() {
+            var box = document.getElementById('box');
+            box.classList.remove('add_move');
+            box.classList.add('back_move');
+        }
+    </script>
+
+</head>
+
+<body>
+    <ul class="menu">
+        <li>
+            <a href="index.html">
+                Links
+            </a>
+        </li>
+
+        <li>
+            <a href="linear.html">
+                Linear
+            </a>
+        </li>
+
+        <li>
+            <a href="multi.html">
+                Multi Positions
+            </a>
+        </li>
+    </ul>
+    <div class="btn-area">
+        <button onclick="toggleMovement()">Linear Animation</button>
+    </div>
+    <div class="conteiner">
+        <div id="box" class="content">
+
+        </div>
+    </div>
+</body>
+
+</html>

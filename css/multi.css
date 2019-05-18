@@ -1,0 +1,52 @@
+
+.add_move {
+    -ms-transform: move 10s linear infinite; /* IE 9 */
+    -webkit-transform: move 10s linear infinite; /* Safari */
+    animation: move 10s linear infinite;
+}
+
+.back_move {
+    -ms-transform: move 0.5s linear; /* IE 9 */
+    -webkit-transform: move 0.5 linear; /* Safari */
+    animation: move_back s linear;
+}
+
+@keyframes move_back { 
+    0% {
+        transform: translate(200PX, -100px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0);
+    }
+
+    5% {
+        transform: translate(0);
+    }
+
+    40% {
+        transform: translate(200PX, -100px);
+        background: green;
+    }
+
+    60% {
+        transform: translate(300PX, 100px);
+        background: green;
+    }
+
+    80% {
+        transform: translate(50PX, 200px);
+        background: yellow;
+    }
+
+    100% {
+        transform: translate(0);
+        background: #831212;
+    }
+}

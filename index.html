@@ -2,126 +2,47 @@
 
 <head>
     <title>Test Horizontal Animation</title>
-    <style>
-        .conteiner {
-            height: 300px;
-            background: #cccccc;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            justify-items: unset;
-        }
-
-        .content {
-            background: #3b77e7;
-            height: 100px;
-            width: 100px;
-        }
-
-        .add_move {
-            /* Could add 'infinite' */
-            -ms-transform: move 10s linear; /* IE 9 */
-            -webkit-transform: move 10s linear; /* Safari */
-            animation: move 10s linear;
-        }
-
-        .back_move {
-            -ms-transform: move 0.5s linear; /* IE 9 */
-            -webkit-transform: move 0.5 linear; /* Safari */
-            animation: move_back 0.5s linear;
-        }
-
-        @keyframes move_back { 
-            0% {
-                transform: translate(200PX, -100px);
-            }
-
-            100% {
-                transform: translate(0);
-            }
-        }
-
-        @keyframes move {
-            0% {
-                transform: translate(0);
-            }
-
-            5% {
-                transform: translate(0);
-            }
-
-            40% {
-                transform: translate(200PX, -100px);
-                background: green;
-            }
-
-            60% {
-                transform: translate(300PX, 100px);
-                background: green;
-            }
-
-            80% {
-                transform: translate(50PX, 200px);
-                background: yellow;
-            }
-
-            100% {
-                transform: translate(0);
-                background: #831212;
-            }
-        }
-    </style>
-    <script>
-
-        var animate = false;
-
-        function toggleMovement() {
-            debugger;
-            if (animate) {
-                removeMovement();
-            } else {
-                addMovement();
-            }
-            animate = !animate;
-        }
-        
-        function addMovement() {
-            var box = document.getElementById('box');
-            box.classList.add('add_move');
-            box.classList.remove('back_move');
-        }
-
-        function removeMovement() {
-            var box = document.getElementById('box');
-            box.classList.remove('add_move');
-            box.classList.add('back_move');
-        }
-    </script>
-    
+    <link rel="stylesheet" type="text/css" href="css/default.css">
 </head>
 
 <body>
-    <p>
-        <a href="https://www.youtube.com/watch?v=WRLY66aRXxI">
-            https://www.youtube.com/watch?v=WRLY66aRXxI
-        </a>
-    </p>
-    <p>
-        <a href="https://www.w3schools.com/css/css3_2dtransforms.asp">
-            https://www.w3schools.com/css/css3_2dtransforms.asp
-        </a>
-    </p>
-    <p>
-        <a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">
-            https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp
-        </a>
-    </p>
-    <button onclick="toggleMovement()">Animation</button>
-    <div class="conteiner">
-        <div id="box" class="content">
+    <ul class="menu">
+        <li>
+            <a href="index.html">
+                Links
+            </a>
+        </li>
 
-        </div>
+        <li>
+            <a href="linear.html">
+                Linear
+            </a>
+        </li>
+
+        <li>
+            <a href="multi.html">
+                Multi Positions
+            </a>
+        </li>
+    </ul>
+    <div class="conteiner">
+        <small>
+            <p>
+                <a href="https://www.w3schools.com/css/css3_animations.asp">
+                    W3 Scholl Animation
+                </a>
+            </p>
+            <p>
+                <a href="https://www.w3schools.com/css/css3_2dtransforms.asp">
+                    W3 Scholl Transform
+                </a>
+            </p>
+            <p>
+                <a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">
+                    W3 Scholl Key Frames
+                </a>
+            </p>
+        </small>
     </div>
 </body>
 
