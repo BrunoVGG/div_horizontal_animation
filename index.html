@@ -4,9 +4,13 @@
     <title>Test Horizontal Animation</title>
     <style>
         .conteiner {
-            height: 100%;
+            height: 300px;
             background: #cccccc;
             padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: unset;
         }
 
         .content {
@@ -18,41 +22,44 @@
 
         @keyframes move {
             0% {
-                transform: translate(0)
+                transform: translate(0);
             }
 
             25% {
-                transform: translate(500PX, 100px)
+                transform: translate(300PX, 100px);
+                background: green;
             }
 
             50% {
-                transform: translate(100PX, 500px)
+                transform: translate(50PX, 200px);
+                background: yellow;
             }
 
             100% {
-                transform: translate(0)
+                transform: translate(0);
+                background: #831212;
             }
         }
     </style>
 </head>
 
 <body>
+    <p>
+        <a href="https://www.youtube.com/watch?v=WRLY66aRXxI">
+            https://www.youtube.com/watch?v=WRLY66aRXxI
+        </a>
+    </p>
+    <p>
+        <a href="https://www.w3schools.com/css/css3_2dtransforms.asp">
+            https://www.w3schools.com/css/css3_2dtransforms.asp
+        </a>
+    </p>
+    <p>
+        <a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">
+            https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp
+        </a>
+    </p>
     <div class="conteiner">
-        <p>
-            <a href="https://www.youtube.com/watch?v=WRLY66aRXxI">
-                https://www.youtube.com/watch?v=WRLY66aRXxI
-            </a>
-        </p>
-        <p>
-            <a href="https://www.w3schools.com/css/css3_2dtransforms.asp">
-                https://www.w3schools.com/css/css3_2dtransforms.asp
-            </a>
-        </p>
-        <p>
-            <a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">
-                https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp
-            </a>
-        </p>
         <div class="content">
 
         </div>
