@@ -17,9 +17,29 @@
             background: #3b77e7;
             height: 100px;
             width: 100px;
-            -ms-transform: move 10s linear infinite; /* IE 9 */
-            -webkit-transform: move 10s linear infinite; /* Safari */
-            animation: move 10s linear infinite;
+        }
+
+        .add_move {
+            /* Could add 'infinite' */
+            -ms-transform: move 10s linear; /* IE 9 */
+            -webkit-transform: move 10s linear; /* Safari */
+            animation: move 10s linear;
+        }
+
+        .back_move {
+            -ms-transform: move 0.5s linear; /* IE 9 */
+            -webkit-transform: move 0.5 linear; /* Safari */
+            animation: move_back 0.5s linear;
+        }
+
+        @keyframes move_back { 
+            0% {
+                transform: translate(200PX, -100px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
         }
 
         @keyframes move {
@@ -27,7 +47,7 @@
                 transform: translate(0);
             }
 
-            20% {
+            5% {
                 transform: translate(0);
             }
 
@@ -52,6 +72,33 @@
             }
         }
     </style>
+    <script>
+
+        var animate = false;
+
+        function toggleMovement() {
+            debugger;
+            if (animate) {
+                removeMovement();
+            } else {
+                addMovement();
+            }
+            animate = !animate;
+        }
+        
+        function addMovement() {
+            var box = document.getElementById('box');
+            box.classList.add('add_move');
+            box.classList.remove('back_move');
+        }
+
+        function removeMovement() {
+            var box = document.getElementById('box');
+            box.classList.remove('add_move');
+            box.classList.add('back_move');
+        }
+    </script>
+    
 </head>
 
 <body>
@@ -70,8 +117,9 @@
             https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp
         </a>
     </p>
+    <button onclick="toggleMovement()">Animation</button>
     <div class="conteiner">
-        <div class="content">
+        <div id="box" class="content">
 
         </div>
     </div>
