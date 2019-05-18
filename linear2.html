@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Test Horizontal Animation</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/linear2.css">
+    <script>
+
+        var mainActived = true;
+
+        function toggleMovement() {
+
+            mainActived = !mainActived;
+
+            if (mainActived) {
+                showMain();
+            } else {
+                hideMain();
+            }
+        }
+
+        function showMain() {
+            // Box 1
+            var box = document.getElementById('box');
+            box.classList.add('box_1_active');
+            box.classList.remove('box_1_inactive');
+        }
+
+        function hideMain() {
+            // Box 1
+            var box = document.getElementById('box');
+            box.classList.add('box_1_inactive');
+            box.classList.remove('box_1_active');
+        }
+    </script>
+
+</head>
+
+<body>
+    <button onclick="toggleMovement()">Linear Animation 2</button>
+
+    <div class="conteiner_linear_2">
+        <div id="box" class="box box_1_active">
+            <div class="box1">
+                Box 1
+            </div>
+            <div class="box2">
+                Box 2
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

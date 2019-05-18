@@ -33,6 +33,7 @@ a {
 button {
     cursor: pointer;
     text-transform: uppercase;
+    color: #2878d3;
 }
 
 .conteiner {
@@ -50,3 +51,5 @@ button {
     height: 100px;
     width: 100px;
 }
+
+

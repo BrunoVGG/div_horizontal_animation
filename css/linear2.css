@@ -1,0 +1,81 @@
+.conteiner_linear_2 {
+    width: 300px;
+    overflow: hidden;
+    height: 300px;
+    background: #cccccc;
+    padding: 10px;
+    /* display: flex;
+    align-items: center;
+    justify-content: left; */
+}
+
+.box {
+    border: 1px solid red;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+    color: #cccccc;
+}
+
+.box1 {
+    background: #3b77e7;
+    width: 300px;
+    height: 300px;
+}
+
+
+/* Box 2 */
+
+.box2 {
+    background: #d6a345;
+    height: 300px;
+    width: 300px;
+    margin-right: -300px;
+}
+
+
+
+/* Box 1 */
+
+.box_1_active {
+    /* Could add 'infinite' */
+    /* Could add 'linear or forwards' */
+    -ms-transform: box_1_active 1s forwards;
+    /* IE 9 */
+    -webkit-transform: box_1_active 1s forwards;
+    /* Safari */
+    animation: box_1_active 1s forwards;
+}
+
+.box_1_inactive {
+    -ms-transform: box_1_inactive 1s forwards;
+    /* IE 9 */
+    -webkit-transform: box_1_inactive 1s forwards;
+    /* Safari */
+    animation: box_1_inactive 1s forwards;
+    
+}
+
+@keyframes box_1_active {
+    0% {
+        transform: translate(-300px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes box_1_inactive {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translate(-300px);
+    }
+}
+
