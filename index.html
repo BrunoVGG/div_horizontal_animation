@@ -17,7 +17,7 @@
             background: #3b77e7;
             height: 100px;
             width: 100px;
-            animation: move 5s linear infinite;
+            animation: move 10s linear infinite;
         }
 
         @keyframes move {
@@ -25,12 +25,21 @@
                 transform: translate(0);
             }
 
-            25% {
+            20% {
+                transform: translate(0);
+            }
+
+            40% {
+                transform: translate(200PX, -100px);
+                background: green;
+            }
+
+            60% {
                 transform: translate(300PX, 100px);
                 background: green;
             }
 
-            50% {
+            80% {
                 transform: translate(50PX, 200px);
                 background: yellow;
             }
